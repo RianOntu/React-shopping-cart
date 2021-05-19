@@ -5,7 +5,7 @@ return (
     <div className="navbar">
       <div>
         <a href="#">
-          <img src="m-tech.png" style={{height:"40px",width:"100px"}} />
+          <img src="m-tech.png" style={{height:"50px",width:"130px"}} />
         </a>
       </div>
      

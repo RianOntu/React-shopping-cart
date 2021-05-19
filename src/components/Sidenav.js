@@ -9,8 +9,8 @@ const Sidenav=({cartItems,onClear})=>{
         <div className="sidenav" id="mySidenav">
            <a href="#" className="closebtn" onClick="closeNav()">&times;</a>
            <div>
-               <h2>Your Cart</h2>
-        {cartItems.length === 0 && <div>Cart is empty</div>}
+               <h2 style={{textAlign:"center"}}>Your Cart</h2>
+        {cartItems.length === 0 && <div><p style={{textAlign:"center",marginTop:"50%"}}>Cart is empty</p></div>}
         {cartItems.map((item) => (
           <div key={item.id} className="row">
               <div className="col-2"><img src={item.image} style={{height:"50px",width:"50px",marginTop:"4px"}}/></div>
