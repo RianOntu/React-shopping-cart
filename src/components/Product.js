@@ -5,12 +5,12 @@ const Product=({product,onAdd})=>{
        
             
             <div className="card" style={{alignItems:"center",height:"350px"}}>
-  <img src={product.image} alt="Avatar" style={{width:"100px",height:"92px"}}/>
+  <img src={product.image} alt="Avatar" style={{width:"100px",height:"92px",marginLeft:"30%"}}/>
   <div style={{justifyContent:"center"}}>
-    <h4><b>{product.title}</b></h4> 
-    <p>BDT {product.price}</p> 
+    <h4 style={{textAlign:"center"}}><b>{product.title}</b></h4> 
+    <p style={{textAlign:"center"}}>BDT {product.price}</p> 
   </div>
-  <button onClick={() => onAdd(product)}>Add To Cart</button>
+  <button style={{marginLeft:"30%"}} onClick={() => onAdd(product)}>Add To Cart</button>
 </div>
         
     )
