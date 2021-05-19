@@ -28,6 +28,7 @@ body {
      
     grid-gap: 1rem;
     align-items: center;
+   margin-left: 5%;
   }
   
   .row.center {
@@ -42,12 +43,7 @@ body {
   .col-3{
       flex:3
   }
-  .block {
-   
-    padding: 1rem;
-    margin: 0.5rem;
-    border-radius: 0.5rem;
-  }
+ 
   .text-right {
     text-align: right;
   }
@@ -89,5 +85,53 @@ body {
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
+  .sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    right: 0;
+    background-color:#E0E0E0; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
   
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+
+  
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  .navbar{
+    padding: 1rem;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
  
