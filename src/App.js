@@ -39,6 +39,9 @@ const onRemove = (product) => {
     );
   }
 };
+const onClear=()=>{
+  setCartItems([])
+}
 
 
   return (
@@ -47,7 +50,7 @@ const onRemove = (product) => {
     
      <div>
       <Main products={products} onAdd={onAdd} onRemove={onRemove}/>  
-      <Sidenav cartItems={cartItems} />  
+      <Sidenav cartItems={cartItems} onClear={onClear} />  
 
      </div>
    

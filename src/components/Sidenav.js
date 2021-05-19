@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Sidenav=({cartItems})=>{
+const Sidenav=({cartItems,onClear})=>{
+  
     
   const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
   
@@ -12,6 +13,7 @@ const Sidenav=({cartItems})=>{
         {cartItems.length === 0 && <div>Cart is empty</div>}
         {cartItems.map((item) => (
           <div key={item.id} className="row">
+              <div className="col-2"><img src={item.image} style={{height:"50px",width:"50px",marginTop:"4px"}}/></div>
             <div className="col-2">{item.title}</div>
             
 
@@ -38,7 +40,10 @@ const Sidenav=({cartItems})=>{
             </div>
             <hr />
             <div className="row">
-              <button className="paymentBtn"onClick={() => alert('Payment Completed!')}>
+              <button className="paymentBtn"onClick={() => {
+                  alert('Payment Completed!');
+                 onClear();
+              }}>
               Payment
               </button>
             </div>
