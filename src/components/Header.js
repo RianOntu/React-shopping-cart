@@ -9,7 +9,7 @@ return (
         </a>
       </div>
      
-          <a id="cart" style={{cursor:"pointer"}}><i className="fas fa-shopping-cart"></i></a>
+          <a id="cart" style={{cursor:"pointer"}}><i className="fas fa-shopping-cart"></i><sup className="badge">0</sup></a>
     
 
     </div>

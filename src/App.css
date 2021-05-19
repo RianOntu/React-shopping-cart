@@ -134,4 +134,11 @@ body {
     justify-content: space-between;
     align-items: center;
   }
+  .badge {
+    background-color: #f04040;
+    border: none;
+    color: #ffffff;
+   padding:2px 5px;
+   border-radius: 70px;
+  }
  
