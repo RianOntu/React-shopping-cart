@@ -46,8 +46,8 @@ const onRemove = (product) => {
       <Header countCartItems={cartItems.length} />
     
      <div>
-      <Main products={products} />  
-      <Sidenav cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />  
+      <Main products={products} onAdd={onAdd} onRemove={onRemove}/>  
+      <Sidenav cartItems={cartItems} />  
 
      </div>
    

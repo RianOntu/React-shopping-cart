@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Product=({product})=>{
+const Product=({product,onAdd})=>{
     return (
        
             
@@ -10,6 +10,7 @@ const Product=({product})=>{
     <h4><b>{product.title}</b></h4> 
     <p>BDT {product.price}</p> 
   </div>
+  <button onClick={() => onAdd(product)}>Add To Cart</button>
 </div>
         
     )

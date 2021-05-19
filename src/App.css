@@ -51,11 +51,11 @@ body {
   button {
     font-size: 0.8rem;
     padding: 0.2rem;
-    margin: 0.1rem;
+    margin: auto;
     border-radius: 0.5rem;
     border: 0.1rem #404040 solid;
     background-color: #f0c040;
-    width: 100%;
+    width: 40%;
     cursor: pointer;
   }
   button.add {
@@ -140,5 +140,10 @@ body {
     color: #ffffff;
    padding:2px 5px;
    border-radius: 70px;
+  }
+  .paymentBtn{
+    background-color: green;
+    width: 100%;
+    color:white;
   }
  
