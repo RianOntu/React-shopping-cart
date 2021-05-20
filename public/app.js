@@ -1,6 +1,6 @@
 window.onload=function(){
     function openNav() {
-  document.getElementById("mySidenav").style.width = "350px";
+  document.getElementById("mySidenav").style.width = "300px";
 }
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";

@@ -14,13 +14,13 @@ const Sidenav=({cartItems,onClear})=>{
                <h2 style={{textAlign:"center"}}>Your Cart</h2>
         {cartItems.length === 0 && <div><p style={{textAlign:"center",marginTop:"50%"}}>Cart is empty</p></div>}
         {cartItems.map((item) => (
-          <div key={item.id} className="row">
-              <div className="col-2"><img src={item.image} style={{height:"50px",width:"50px",marginTop:"4px"}}/></div>
-            <div className="col-2">{item.title}</div>
+          <div key={item.id} className="row1">
+              <div className="col-2"><img src={item.image} style={{height:"50px",width:"50px",marginTop:"4px",marginLeft:"13px"}}/></div>
+            <div className="col-3">{item.title}</div>
             
 
             <div className="col-2 text-right">
-              {item.qty} x ${item.price.toFixed(2)}
+              {item.qty} x BDT {item.price.toFixed(2)}
             </div>
           </div>
         ))}
@@ -32,16 +32,16 @@ const Sidenav=({cartItems,onClear})=>{
           
         <br/><br/>
 
-            <div className="row">
-              <div className="col-2">
-                <strong>Total Price</strong>
+            <div className="row1">
+              <div className="col-3">
+                <strong style={{marginLeft:"13px"}}>Total Price</strong>
               </div>
-              <div className="col-1 text-right">
-                <strong>${itemsPrice.toFixed(2)}</strong>
+              <div className="col-2 text-right">
+                <strong>BDT {itemsPrice.toFixed(2)}</strong>
               </div>
             </div>
             <hr />
-            <div className="row">
+            <div className="row1">
               <button className="paymentBtn"onClick={() => {
                   alert('Payment Completed!');
                  onClear();

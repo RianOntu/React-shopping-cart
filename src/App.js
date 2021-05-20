@@ -61,7 +61,7 @@ const onClear=()=>{
       <Header countCartItems={cartItems.length} />
     
      <div>
-      <Main products={products} onAdd={onAdd} onRemove={onRemove} btnMode={btnMode}/>  
+      <Main products={products} onAdd={onAdd} onRemove={onRemove} btnMode={btnMode} cartItems={cartItems}/>  
       <Sidenav cartItems={cartItems} onClear={onClear} onAdd={onAdd} onRemove={onRemove} />  
       
      
