@@ -4,28 +4,38 @@ import Main from './components/Main';
 import Header from './components/Header';
 import Sidenav from './components/Sidenav';
 
+
 import './App.css';
+
 
 
 
 function App() {
   const [products,setProducts]=useState([]);
   const [cartItems, setCartItems] = useState([]);
+  const [btnMode,setbtnMode]=useState(false);
 
 useEffect(()=>{
   getProducts().then(res=>setProducts(res.data));
 },[])
 const onAdd = (product) => {
+  setbtnMode(true)
   const exist = cartItems.find((x) => x.id === product.id);
   if (exist) {
+
     setCartItems(
       cartItems.map((x) =>
-        x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+        x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x,
+      
       )
     );
   } else {
     setCartItems([...cartItems, { ...product, qty: 1 }]);
+
+    
   }
+  
+  
 };
 const onRemove = (product) => {
   const exist = cartItems.find((x) => x.id === product.id);
@@ -39,9 +49,11 @@ const onRemove = (product) => {
     );
   }
 };
+
 const onClear=()=>{
   setCartItems([])
 }
+ 
 
 
   return (
@@ -49,8 +61,10 @@ const onClear=()=>{
       <Header countCartItems={cartItems.length} />
     
      <div>
-      <Main products={products} onAdd={onAdd} onRemove={onRemove}/>  
-      <Sidenav cartItems={cartItems} onClear={onClear} />  
+      <Main products={products} onAdd={onAdd} onRemove={onRemove} btnMode={btnMode}/>  
+      <Sidenav cartItems={cartItems} onClear={onClear} onAdd={onAdd} onRemove={onRemove} />  
+      
+     
 
      </div>
    

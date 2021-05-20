@@ -1,6 +1,8 @@
 import React from 'react';
 
-const Product=({product,onAdd})=>{
+
+
+const Product=({product,onAdd,btnMode,onRemove})=>{
     return (
        
             
@@ -10,7 +12,17 @@ const Product=({product,onAdd})=>{
     <h4 style={{textAlign:"center",marginTop:"10%"}}><b>{product.title}</b></h4> 
     <p style={{textAlign:"center"}}>BDT {product.price}</p> 
   </div>
-  <button style={{marginLeft:"30%"}} onClick={() => onAdd(product)}>Add To Cart</button>
+  {btnMode ?  <div className="buttons">
+              <button onClick={() => onRemove(product)} className="remove">
+                -
+              </button>{' '}
+              <button onClick={() => onAdd(product)} className="add">
+                +
+              </button>
+            </div> : <button style={{marginLeft:"30%"}} onClick={() => {
+              onAdd(product)
+            
+            }}>Add To Cart</button>}
 </div>
         
     )

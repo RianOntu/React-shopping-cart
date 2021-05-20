@@ -1,9 +1,11 @@
 import React from 'react';
 
+
 const Sidenav=({cartItems,onClear})=>{
   
     
   const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
+  
   
     return (
         <div className="sidenav" id="mySidenav">
