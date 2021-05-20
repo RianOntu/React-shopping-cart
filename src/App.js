@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Sidenav from './components/Sidenav';
 
 
+
 import './App.css';
 
 
@@ -14,12 +15,14 @@ function App() {
   const [products,setProducts]=useState([]);
   const [cartItems, setCartItems] = useState([]);
   const [btnMode,setbtnMode]=useState(false);
+  
 
 useEffect(()=>{
   getProducts().then(res=>setProducts(res.data));
 },[])
 const onAdd = (product) => {
   setbtnMode(true)
+  
   const exist = cartItems.find((x) => x.id === product.id);
   if (exist) {
 
@@ -61,6 +64,13 @@ const onClear=()=>{
       <Header countCartItems={cartItems.length} />
     
      <div>
+     <div>
+               
+                 
+                 
+               
+                
+            </div>
       <Main products={products} onAdd={onAdd} onRemove={onRemove} btnMode={btnMode} cartItems={cartItems}/>  
       <Sidenav cartItems={cartItems} onClear={onClear} onAdd={onAdd} onRemove={onRemove} />  
       
