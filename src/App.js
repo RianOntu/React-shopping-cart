@@ -40,6 +40,7 @@ const onAdd = (product) => {
   
   
 };
+
 const onRemove = (product) => {
   const exist = cartItems.find((x) => x.id === product.id);
   if (exist.qty === 1) {
@@ -52,6 +53,13 @@ const onRemove = (product) => {
     );
   }
 };
+const onWholeItemRemove=(item)=>{
+  const exist=products.find(x=>x.id===item.id)
+  if(exist){
+    setCartItems(cartItems.filter(item=>item.id!==exist.id))
+  }
+}
+
 
 const onClear=()=>{
   setCartItems([])
@@ -72,7 +80,7 @@ const onClear=()=>{
                 
             </div>
       <Main products={products} onAdd={onAdd} onRemove={onRemove} btnMode={btnMode} cartItems={cartItems}/>  
-      <Sidenav cartItems={cartItems} onClear={onClear} onAdd={onAdd} onRemove={onRemove} />  
+      <Sidenav cartItems={cartItems} onClear={onClear} onAdd={onAdd} onRemove={onRemove} onWholeItemRemove={onWholeItemRemove} products={products} />  
       
      
 

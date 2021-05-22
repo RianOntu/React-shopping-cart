@@ -1,6 +1,7 @@
 body {
     font-family: 'Helvetica';
-    overflow-x: scroll;
+   
+  
   }
   h1,
   h2,
@@ -112,8 +113,7 @@ body {
     z-index: 1; 
     top: 0; 
     right: 0;
-    background-color:#E0E0E0; 
-    overflow-x: scroll; 
+    background-color:white; 
     padding-top: 60px; 
     transition: 0.5s; 
     overflow-y: scroll;
@@ -140,6 +140,13 @@ body {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+   
+  }
+  .sidenav .closebtn:hover{
+    color:black;
+  }
+  .sidenav .closebtn:focus{
+    color:black;
   }
   
 
@@ -170,6 +177,11 @@ body {
     width: 100%;
     color:white;
   }
+  .clearCart{
+    background-color: red;
+    width: 100%;
+    color:white;
+  }
   .buttons{
     margin-left: 40%;
   }
@@ -179,3 +191,4 @@ body {
   color: white;
   margin-bottom: 15px;
 }
+

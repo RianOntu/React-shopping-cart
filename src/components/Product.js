@@ -3,7 +3,7 @@ import React from 'react';
 
 
 const Product=({product,onAdd,btnMode,onRemove,cartItems})=>{
-  
+ 
   
      const isClicked=()=>{
       let exist=cartItems.find(x=>x.id===product.id)
