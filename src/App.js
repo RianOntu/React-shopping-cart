@@ -20,6 +20,16 @@ function App() {
 useEffect(()=>{
   getProducts().then(res=>setProducts(res.data));
 },[])
+function showAlert(msg,duration)
+{
+ var el = document.createElement("div");
+ el.setAttribute("style","position:absolute;top:1%;background-color:green;color:white;padding:15px;width:100%;text-align:center");
+ el.innerHTML = msg;
+ setTimeout(function(){
+  el.parentNode.removeChild(el);
+ },duration);
+ document.body.appendChild(el);
+}
 const onAdd = (product) => {
   setbtnMode(true)
   
@@ -37,7 +47,7 @@ const onAdd = (product) => {
 
     
   }
-  
+  showAlert('Cart Updated !',1000)
   
 };
 
@@ -52,17 +62,20 @@ const onRemove = (product) => {
       )
     );
   }
+  showAlert('Cart Updated !',1000)
 };
 const onWholeItemRemove=(item)=>{
   const exist=products.find(x=>x.id===item.id)
   if(exist){
     setCartItems(cartItems.filter(item=>item.id!==exist.id))
   }
+  showAlert('Cart Updated !',1000)
 }
 
 
 const onClear=()=>{
   setCartItems([])
+  showAlert('Cart Updated !',1000)
 }
  
 

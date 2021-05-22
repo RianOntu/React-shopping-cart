@@ -18,7 +18,7 @@ const Sidenav=({cartItems,onClear,onWholeItemRemove})=>{
         {cartItems.map((item) => (
           <div key={item.id} className="row1">
               <div className="col-2"><img src={item.image} style={{height:"50px",width:"50px",marginTop:"4px",marginLeft:"22px"}}/></div>
-            <div className="col-3">{item.title}</div>
+            <div className="col-3 itemTitle">{item.title}</div>
             
 
             <div className="col-2 text-right">
